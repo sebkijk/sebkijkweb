@@ -1,0 +1,18 @@
+/*
+Theme Name: SebKijk Atelier
+Theme URI: https://sebkijk.nl/
+Author: SebKijk
+Author URI: https://sebkijk.nl/
+Description: A custom WordPress theme for a Dutch film criticism and cultural notebook platform. SebKijk Atelier is a digital sketchbook for essays, film criticism, annotations, sketches and archival fragments. Inspired by Sabzian, Roger Ebert's Great Movies, and Peter Bosma. Minimalist editorial design, off-white paper backgrounds, ink typography, dark red accents.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sebkijk-atelier
+Tags: editorial, magazine, film, criticism, archive, notebook, custom-post-types, block-styles, accessibility-ready
+*/
+
+/* All theme styles are organised in /assets/css/. This stylesheet exists only
+   so WordPress can read the theme header. */

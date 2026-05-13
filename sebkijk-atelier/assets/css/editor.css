@@ -1,0 +1,44 @@
+/* Block editor styles – mirror the front-end voice. */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400&family=Inter:wght@400;600&display=swap');
+
+:root {
+	--c-paper:     #f3eee3;
+	--c-ink:       #1a1714;
+	--c-ink-muted: #6a615a;
+	--c-rule:      #c9bfa9;
+	--c-accent:    #8a1a1a;
+}
+
+.editor-styles-wrapper {
+	background-color: var(--c-paper);
+	color: var(--c-ink);
+	font-family: "EB Garamond", Georgia, serif;
+	font-size: 19px;
+	line-height: 1.7;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3 {
+	font-family: "EB Garamond", Georgia, serif;
+	font-weight: 500;
+	line-height: 1.15;
+	letter-spacing: -0.01em;
+}
+.editor-styles-wrapper h1 { font-size: 2.75rem; }
+.editor-styles-wrapper h2 { font-size: 2rem; }
+.editor-styles-wrapper h3 { font-size: 1.5rem; }
+
+.editor-styles-wrapper p { font-family: "EB Garamond", Georgia, serif; }
+.editor-styles-wrapper em, .editor-styles-wrapper i { font-style: italic; }
+.editor-styles-wrapper code, .editor-styles-wrapper kbd { font-family: "JetBrains Mono", monospace; font-size: .85em; }
+
+.editor-styles-wrapper blockquote {
+	border-left: 1px solid var(--c-rule);
+	padding-left: 1.25em;
+	font-style: italic;
+	color: var(--c-ink-muted);
+}
+
+.editor-styles-wrapper a { color: var(--c-accent); text-decoration: underline; text-underline-offset: .15em; }
