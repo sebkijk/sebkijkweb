@@ -21,3 +21,6 @@ require_once SEBKIJK_ATELIER_DIR . '/inc/acf-fields.php';
 require_once SEBKIJK_ATELIER_DIR . '/inc/template-tags.php';
 require_once SEBKIJK_ATELIER_DIR . '/inc/blocks.php';
 require_once SEBKIJK_ATELIER_DIR . '/inc/notes.php';
+require_once SEBKIJK_ATELIER_DIR . '/inc/customizer.php';
+require_once SEBKIJK_ATELIER_DIR . '/inc/seo.php';
+require_once SEBKIJK_ATELIER_DIR . '/inc/widgets.php';

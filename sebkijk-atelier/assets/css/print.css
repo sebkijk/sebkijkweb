@@ -1,0 +1,77 @@
+/* SebKijk Atelier — print stylesheet
+   ----------------------------------------------------------------------
+   Strips navigation chrome, hides interactive UI, prints on white with
+   black ink. Long URLs are expanded after links so the printed page is
+   self-referential. */
+
+@page {
+	size: A4;
+	margin: 22mm 18mm 22mm 18mm;
+}
+
+@media print {
+
+	html, body {
+		background: #fff !important;
+		color: #000 !important;
+	}
+	body { background-image: none !important; }
+
+	.site-head__rule,
+	.site-foot__rule,
+	.site-head,
+	.site-foot,
+	.site-search,
+	.filmindex-search,
+	.filmindex__browse,
+	.navigation.pagination,
+	.note__handle,
+	.comments,
+	.to-reveal { display: none !important; opacity: 1 !important; transform: none !important; }
+
+	.site-main {
+		padding: 0 !important;
+		max-width: 100% !important;
+	}
+
+	a {
+		color: #000 !important;
+		text-decoration: underline;
+	}
+	a[href^="http"]::after {
+		content: " (" attr(href) ")";
+		font-family: "JetBrains Mono", monospace;
+		font-size: .7em;
+		color: #555;
+	}
+
+	.prose, .essay__body, .film__body {
+		max-width: 100% !important;
+	}
+
+	.film-credits {
+		position: static !important;
+		border: 1px solid #000;
+		padding: 6mm;
+	}
+
+	figure, .scrapbook__item, .home__sketch-figure img {
+		page-break-inside: avoid;
+		box-shadow: none !important;
+		transform: none !important;
+		filter: none !important;
+	}
+
+	h1, h2, h3 { page-break-after: avoid; }
+	p, blockquote { orphans: 3; widows: 3; }
+
+	/* Show a small URL/colophon at the end of a printed essay. */
+	.essay::after, .film::after {
+		content: "Printed from " attr(data-print-source);
+		display: block;
+		margin-top: 8mm;
+		font-family: "JetBrains Mono", monospace;
+		font-size: .65rem;
+		color: #555;
+	}
+}

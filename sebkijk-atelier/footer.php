@@ -27,6 +27,11 @@
 			</nav>
 		<?php endif; ?>
 
+		<?php $colophon = get_theme_mod( 'sebkijk_colophon_text', '' );
+		if ( $colophon ) : ?>
+			<p class="site-foot__colophon-text"><?php echo wp_kses_post( $colophon ); ?></p>
+		<?php endif; ?>
+
 		<?php if ( is_active_sidebar( 'colophon' ) ) : ?>
 			<div class="site-foot__colophon">
 				<?php dynamic_sidebar( 'colophon' ); ?>

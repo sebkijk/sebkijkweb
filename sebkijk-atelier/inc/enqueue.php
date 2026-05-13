@@ -33,6 +33,14 @@ add_action( 'wp_enqueue_scripts', function () {
 		SEBKIJK_ATELIER_VERSION
 	);
 
+	wp_enqueue_style(
+		'sebkijk-print',
+		SEBKIJK_ATELIER_URI . '/assets/css/print.css',
+		array( 'sebkijk-main' ),
+		SEBKIJK_ATELIER_VERSION,
+		'print'
+	);
+
 	wp_enqueue_script(
 		'sebkijk-main',
 		SEBKIJK_ATELIER_URI . '/assets/js/main.js',
@@ -45,6 +53,23 @@ add_action( 'wp_enqueue_scripts', function () {
 		wp_enqueue_script(
 			'sebkijk-notes',
 			SEBKIJK_ATELIER_URI . '/assets/js/notes.js',
+			array(),
+			SEBKIJK_ATELIER_VERSION,
+			true
+		);
+		wp_enqueue_script(
+			'sebkijk-lightbox',
+			SEBKIJK_ATELIER_URI . '/assets/js/lightbox.js',
+			array(),
+			SEBKIJK_ATELIER_VERSION,
+			true
+		);
+	}
+
+	if ( is_singular( 'essay' ) ) {
+		wp_enqueue_script(
+			'sebkijk-reading-progress',
+			SEBKIJK_ATELIER_URI . '/assets/js/reading-progress.js',
 			array(),
 			SEBKIJK_ATELIER_VERSION,
 			true

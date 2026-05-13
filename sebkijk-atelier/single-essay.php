@@ -50,6 +50,8 @@ while ( have_posts() ) : the_post();
 
 	<?php sebkijk_render_attached_notes(); ?>
 
+	<?php get_template_part( 'template-parts/author-bio' ); ?>
+
 	<?php sebkijk_related_list( 'essay_related_films', null, __( 'Films mentioned', 'sebkijk-atelier' ) ); ?>
 
 	<footer class="essay__foot">
