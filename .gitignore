@@ -1,2 +1,5 @@
 # Patch exports for downloading the branch outside the session.
 /_patches/
+
+# Downloadable theme bundle.
+/sebkijk-atelier.zip
